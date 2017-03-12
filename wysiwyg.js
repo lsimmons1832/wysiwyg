@@ -33,17 +33,22 @@ var people = [
 	Lifespan: "1978 - Present"}
 ];
 
+var peopleHolder = document.getElementById("peopleHolder");
 var peopleString = "";
 var currentPerson;
-
+console.log(people);
 // function addPeople(){
 
 for (var i = 0; i < people.length; i++) {
 	currentPerson = people[i];
-	peopleString += `<div><p>Brand: ${people.Name} </p>`;
+	peopleString += `<div><p>${people[i].Name}</p>`;
+	peopleString += `<p>${people[i].Title}</p>`;
+	peopleString += `<p>${people[i].Bio}</p>`;
+	peopleString += `<img src="${people[i].Image}">`;
+	peopleString += `<p>${people[i].Lifespan}</p>`;
 }
 peopleString += "</div>";
-peopleString.innerHTML = peopleString;
+peopleHolder.innerHTML += peopleString;
 // }
 
 // addPeople();
