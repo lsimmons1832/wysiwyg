@@ -1,6 +1,7 @@
 body {
 	background-color: #214541;
 	color: white;
+	width: 80%;
 }
 
 #peopleHolder {
@@ -27,4 +28,14 @@ h3 {
 img {
 	height: 300px;
 	width: inherit;
+}
+
+/*For every even numbered element, have a light yellow background.*/
+#peopleHolder div:nth-child(even) {
+	background: #D6F345;
+}
+
+/*For every odd numbered element, have a light blue background.*/
+#peopleHolder div:nth-child(odd) {
+	background: #63B995;
 }
