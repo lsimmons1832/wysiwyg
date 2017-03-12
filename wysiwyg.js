@@ -41,7 +41,7 @@ console.log(people);
 
 for (var i = 0; i < people.length; i++) {
 	currentPerson = people[i];
-	peopleString += `<div class="sectionContainer"><section><h3>${people[i].Name}</h3>`;
+	peopleString += `<div class="sectionContainer"><section id="section"><h3>${people[i].Name}</h3>`;
 	peopleString += `<h4>${people[i].Title}</h4>`;
 	peopleString += `<p>${people[i].Bio}</p>`;
 	peopleString += `<img src="${people[i].Image}">`;
@@ -51,16 +51,17 @@ for (var i = 0; i < people.length; i++) {
 peopleHolder.innerHTML += peopleString;
 
 // When you click on one of the person elements, a dotted border should appear around it.
-var modifyBorder = document.getElementsByClassName("sectionContainer");
 
 
-modifyBorder.addEventListener("click", function(){
+
+peopleHolder.addEventListener("click", function(){
+	var section = document.getElementById("section");
 	console.log("I'm inside the function");
-	// if (event.target.click === true){
-  modifyBorder.classList.add("border");
-	// }
-	// else
-	// 	break;
+	for (var i = 0; i < peopleHolder.length; i++) {
+		section.classList.add("border");
+	}
+	console.log(section);
+  // section.classList.add("border");
 });
 
 // When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
