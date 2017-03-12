@@ -1,0 +1,46 @@
+body {
+	background-color: #214541;
+	color: white;
+	width: 80%;
+}
+
+#peopleHolder {
+	display: flex;
+	flex-direction: row;
+}
+
+section {
+	border: solid black 2px;
+	max-height: 800px;
+	width: 400px;
+	margin: 10px;
+	display: inline-block;
+}
+
+h3 {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 800;
+	width: inherit;
+}
+
+img {
+	height: 300px;
+	width: inherit;
+}
+
+/*For every even numbered element, have a light yellow background.*/
+#peopleHolder div:nth-child(even) {
+	background: #D6F345;
+}
+
+/*For every odd numbered element, have a light blue background.*/
+#peopleHolder div:nth-child(odd) {
+	background: #63B995;
+}
+
+/*When you click on one of the person elements, a dotted border should appear around it.*/
+.border {
+	border: 1px dotted blue;
+}
