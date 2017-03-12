@@ -51,13 +51,16 @@ for (var i = 0; i < people.length; i++) {
 peopleHolder.innerHTML += peopleString;
 
 // When you click on one of the person elements, a dotted border should appear around it.
-var modifyBorder = document.getElementById("sectionContainer");
+var modifyBorder = document.getElementsByClassName("sectionContainer");
 
 
 modifyBorder.addEventListener("click", function(){
-
+	console.log("I'm inside the function");
+	// if (event.target.click === true){
   modifyBorder.classList.add("border");
-
+	// }
+	// else
+	// 	break;
 });
 
 // When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
