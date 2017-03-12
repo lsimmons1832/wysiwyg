@@ -33,26 +33,25 @@ var people = [
 	Lifespan: "1978 - Present"}
 ];
 
+// Create a DOM element for each of the objects inside the container. Style your person elements however you like.
 var peopleHolder = document.getElementById("peopleHolder");
 var peopleString = "";
 var currentPerson;
 console.log(people);
-// function addPeople(){
 
 for (var i = 0; i < people.length; i++) {
 	currentPerson = people[i];
-	peopleString += `<div><p>${people[i].Name}</p>`;
-	peopleString += `<p>${people[i].Title}</p>`;
+	peopleString += `<div><section><h3>${people[i].Name}</h3>`;
+	peopleString += `<h4>${people[i].Title}</h4>`;
 	peopleString += `<p>${people[i].Bio}</p>`;
 	peopleString += `<img src="${people[i].Image}">`;
-	peopleString += `<p>${people[i].Lifespan}</p>`;
+	peopleString += `<p>${people[i].Lifespan}</p></section>`;
+	peopleString += "</div>";
 }
-peopleString += "</div>";
 peopleHolder.innerHTML += peopleString;
-// }
 
-// addPeople();
-// Create a DOM element for each of the objects inside the container. Style your person elements however you like.
+
+
 // For every even numbered element, have a light yellow background.
 // For every odd numbered element, have a light blue background.
 // Each element's DOM structure should be as shown below.
