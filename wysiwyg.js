@@ -55,9 +55,9 @@ peopleHolder.innerHTML += peopleString;
 
 
 peopleHolder.addEventListener("click", function(){
-	var section = document.getElementById("section");
+	var section = document.getElementsByTagName("section");
 	console.log("I'm inside the function");
-	for (var i = 0; i < peopleHolder.length; i++) {
+	for (var j = 0; j < peopleHolder.length; j++) {
 		section.classList.add("border");
 	}
 	console.log(section);

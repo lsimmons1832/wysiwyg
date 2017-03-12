@@ -90,6 +90,7 @@ for (var i = 0; i < containerEl.length; i++) {
   });
 });
 ```
+![Blog Screengrab](https://raw.githubusercontent.com/lsimmons1832/wysiwyg/master/screenshot.png)
 
 ## Technologies
 - HTML5
