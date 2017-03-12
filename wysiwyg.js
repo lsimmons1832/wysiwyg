@@ -41,7 +41,7 @@ console.log(people);
 
 for (var i = 0; i < people.length; i++) {
 	currentPerson = people[i];
-	peopleString += `<div><section><h3>${people[i].Name}</h3>`;
+	peopleString += `<div class="sectionContainer"><section><h3>${people[i].Name}</h3>`;
 	peopleString += `<h4>${people[i].Title}</h4>`;
 	peopleString += `<p>${people[i].Bio}</p>`;
 	peopleString += `<img src="${people[i].Image}">`;
@@ -50,12 +50,16 @@ for (var i = 0; i < people.length; i++) {
 }
 peopleHolder.innerHTML += peopleString;
 
-
-
-// For every even numbered element, have a light yellow background.
-// For every odd numbered element, have a light blue background.
-// Each element's DOM structure should be as shown below.
 // When you click on one of the person elements, a dotted border should appear around it.
+var modifyBorder = document.getElementById("sectionContainer");
+
+
+modifyBorder.addEventListener("click", function(){
+
+  modifyBorder.classList.add("border");
+
+});
+
 // When you click on one of the person elements, the text input should immediately gain focus so that you can start typing.
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
