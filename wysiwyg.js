@@ -70,9 +70,11 @@ var userInput = document.getElementById("userInput");
 
 userInput.addEventListener("keypress", function(event){
 	var sectionContainer = document.getElementsByClassName("border");
+	var bioContainer = sectionContainer[0].childNodes[0].children[2];
+	bioContainer.innerHTML = "";
   var mimicMeElement = userInput.value;
-  console.log("sectionContainer.innerHTML", sectionContainer[0]);
- 	// mimicMeElement.innerHTML = target.ParentNode.firstElementChild;
+  bioContainer.innerHTML += mimicMeElement;
+  console.log("sectionContainer.innerHTML", bioContainer);
 });
 
 
