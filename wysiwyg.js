@@ -77,7 +77,11 @@ userInput.addEventListener("keypress", function(event){
   console.log("sectionContainer.innerHTML", bioContainer);
 });
 
-
-
-
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
+
+window.addEventListener("keypress", function(event){
+    if(event.keyCode==13){
+        userInput.value = ""; 
+        return false; 
+    }
+});
