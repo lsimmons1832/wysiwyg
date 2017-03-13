@@ -1,24 +1,30 @@
 body {
 	background-color: #214541;
-	color: white;
+	color: #2c3539;
 	width: 80%;
+}
+
+h1 {
+	color: #63B995;
 }
 
 #peopleHolder {
 	display: flex;
-	flex-direction: row;
+	/*flex-direction: row;*/
+	margin: 10px 0 10px 0;
 }
 
 section {
-	border: solid black 2px;
+	border: solid #214546 2px;
 	max-height: 800px;
 	width: 400px;
 	margin: 10px;
+	padding: 2px;
 	display: inline-block;
 }
 
 h3 {
-	color: white;
+	color: #2c3539;
 	text-align: center;
 	font-size: 40px;
 	font-weight: 800;
@@ -42,5 +48,5 @@ img {
 
 /*When you click on one of the person elements, a dotted border should appear around it.*/
 .border {
-	border: 1px dotted blue;
+	border: 2px dotted white;
 }
