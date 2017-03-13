@@ -47,5 +47,5 @@ img {
 
 /*When you click on one of the person elements, a dotted border should appear around it.*/
 .border {
-	border: 1px dotted white;
+	border: 2px dotted white;
 }
