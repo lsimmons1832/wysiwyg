@@ -63,19 +63,19 @@ var userInput = document.getElementById("userInput");
 			}
 			this.classList.add("border");
 			userInput.focus();
-			console.log("where am I?", section)
-			// for (var k = 0; k < userInput.length; k++) {
-			// 	userInput.addEventListener("keypress", function(event){
-   //      	var mimicMeElement = document.getElementById("userInput").value;
- 		// 			mimicMeElement.innerHTML = target.ParentNode.firstElementChild;
-			// 	});
-			// }
 	});
-	// this.classList.remove("border");
 }
-		// console.log("I made it here", firstElementChild);
 
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
+
+userInput.addEventListener("keypress", function(event){
+	var sectionContainer = document.getElementsByClassName("border");
+  var mimicMeElement = userInput.value;
+  console.log("sectionContainer.innerHTML", sectionContainer[0]);
+ 	// mimicMeElement.innerHTML = target.ParentNode.firstElementChild;
+});
+
+
 
 
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
