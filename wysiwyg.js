@@ -41,9 +41,9 @@ console.log(people);
 
 for (var i = 0; i < people.length; i++) {
 	currentPerson = people[i];
-	peopleString += `<div class="sectionContainer"><section id="section"><h3>${people[i].Name}</h3>`;
+	peopleString += `<div class="sectionContainer"><section class="section"><h3>${people[i].Name}</h3>`;
 	peopleString += `<h4>${people[i].Title}</h4>`;
-	peopleString += `<p>${people[i].Bio}</p>`;
+	peopleString += `<p class="bio">${people[i].Bio}</p>`;
 	peopleString += `<img src="${people[i].Image}">`;
 	peopleString += `<p>${people[i].Lifespan}</p></section>`;
 	peopleString += `</div>`;
@@ -56,21 +56,32 @@ var section = document.getElementsByClassName("sectionContainer");
 var userInput = document.getElementById("userInput");
 
 	for (var j = 0; j < section.length; j++) {
-		// console.log("I made it here", userInput);
 		section[j].addEventListener("click", function(){
+			var sectionContainer = document.getElementsByClassName("border");
+			for (var i = 0; i < sectionContainer.length; i++) {
+				sectionContainer[i].classList.remove("border");
+			}
 			this.classList.add("border");
 			userInput.focus();
-			// console.log("where am I?", section)
-			// for (var k = 0; k < userInput.length; k++) {
-			// 	userInput[k].addEventListener("keypress", function(event){
-   //      	var mimicMeElement = document.getElementById("userInput").value;
- 		// 			event.target.parent.childNode.innerHTML = mimicMeElement;
-			// 	});
-			// }
 	});
 }
 
 // When there is a highlighted person element, and you begin typing in the input box, the person's biography should be immediately bound to what you are typing, letter by letter.
 
+userInput.addEventListener("keypress", function(event){
+	var sectionContainer = document.getElementsByClassName("border");
+	var bioContainer = sectionContainer[0].childNodes[0].children[2];
+	bioContainer.innerHTML = "";
+  var mimicMeElement = userInput.value;
+  bioContainer.innerHTML += mimicMeElement;
+  console.log("sectionContainer.innerHTML", bioContainer);
+});
 
 // When you press the enter/return key when typing in the input field, then the content of the input field should immediately be blank.
+
+window.addEventListener("keypress", function(event){
+    if(event.keyCode==13){
+        userInput.value = ""; 
+        return false; 
+    }
+});
