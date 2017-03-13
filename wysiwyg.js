@@ -46,7 +46,7 @@ for (var i = 0; i < people.length; i++) {
 	peopleString += `<p>${people[i].Bio}</p>`;
 	peopleString += `<img src="${people[i].Image}">`;
 	peopleString += `<p>${people[i].Lifespan}</p></section>`;
-	peopleString += `"</div>"`;
+	peopleString += `</div>`;
 }
 peopleHolder.innerHTML += peopleString;
 
