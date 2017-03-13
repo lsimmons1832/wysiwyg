@@ -19,6 +19,7 @@ section {
 	max-height: 800px;
 	width: 400px;
 	margin: 10px;
+	padding: 2px;
 	display: inline-block;
 }
 

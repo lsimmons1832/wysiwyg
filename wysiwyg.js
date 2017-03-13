@@ -56,10 +56,17 @@ var section = document.getElementsByTagName("section");
 var userInput = document.getElementById("userInput");
 
 	for (var j = 0; j < section.length; j++) {
-		console.log("I made it here", userInput);
+		// console.log("I made it here", userInput);
 		section[j].addEventListener("click", function(){
 			this.classList.add("border");
 			userInput.focus();
+			// console.log("where am I?", section)
+			// for (var k = 0; k < userInput.length; k++) {
+			// 	userInput[k].addEventListener("keypress", function(event){
+   //      	var mimicMeElement = document.getElementById("userInput").value;
+ 		// 			event.target.parent.childNode.innerHTML = mimicMeElement;
+			// 	});
+			// }
 	});
 }
 
